@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Digimons</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="title-bar">
+            <h1 class="api-title">API Digimons</h1>
+        </div>
+        <div class="container">
+            <input type="text" v-model="searchText" placeholder="Informe o nome do Digimon">
+            <button @click="fetchDigimons" class="fetch-button">Buscar</button>
+        </div>
+        <div id="loading" v-if="loading">Carregando...</div>
+        <div class="digimon-grid">
+            <div v-for="digimon in filteredDigimons" :key="digimon.name" class="digimon-card">
+                <img :src="digimon.img" :alt="digimon.name">
+                <p class="digimon-name">{{ digimon.name }}</p>
+                <button @click="toggleInfo(digimon)" class="info-button">Mais informações</button>
+                <div v-if="digimon.showInfo" class="details">
+                    <p><span class="info-label">Nível:</span> {{ digimon.level }}</p>
+                    <p><span class="info-label">Tipo:</span> {{ digimon.type }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
