@@ -6,7 +6,13 @@ uma API pública de Digimon para exibir informações sobre diferentes Digimons.
 
 - Lista de Digimons: Exibe uma lista de Digimons com suas imagens e nomes.
 - Detalhes dos Digimons: Ao clicar em um Digimon, o usuário pode ver informações detalhadas como nível e tipo.
-- Busca de Digimons: Permite buscar Digimons pelo nome, facilitando a navegação.
+- Busca de Digimons: Permite buscar Digimons pelo nome, facilitando a navegação. 
+
+# Tecnologias utilizadas
+
+- HTML
+- CSS
+- Vue.Js
 
 # imagens da aplicação
 
